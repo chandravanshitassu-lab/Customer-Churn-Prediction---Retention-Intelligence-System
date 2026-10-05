@@ -1,0 +1,26 @@
+Check,Result,Details,Status
+File Exists,customer_churn.csv,data\raw\customer_churn.csv,PASS
+Row Count,500,Expected ~500,PASS
+Column Count,9,"Columns: ['CustomerID', 'Tenure', 'MonthlyCharges', 'TotalCharges', 'Contract', 'PaymentMethod', 'PaperlessBilling', 'SeniorCitizen', 'Churn']",PASS
+Expected Columns,All present,0 missing,PASS
+Target Column Exists,Churn,'Churn' in columns,PASS
+Target Values (0/1),"{np.int64(0), np.int64(1)}","Must be {0, 1}",PASS
+Churn Rate (%),10.6%,Actual churn proportion,PASS
+Missing Values,0 total,None,PASS
+Duplicate Rows,0,0 exact duplicates,PASS
+Duplicate CustomerIDs,0,0 duplicate IDs,PASS
+Non-Negative: Tenure,"min=1, max=71",0 negative values,PASS
+Non-Negative: MonthlyCharges,"min=20, max=199",0 negative values,PASS
+Non-Negative: TotalCharges,"min=159, max=7992",0 negative values,PASS
+Non-Negative: SeniorCitizen,"min=0, max=1",0 negative values,PASS
+SeniorCitizen Binary,"{np.int64(0), np.int64(1)}","Must be {0, 1}",PASS
+Valid Categories: Contract,OK,"Valid: {'One year', 'Month-to-month', 'Two year'}",PASS
+Valid Categories: PaymentMethod,OK,"Valid: {'Credit Card', 'Bank Transfer', 'Electronic Check'}",PASS
+Valid Categories: PaperlessBilling,OK,"Valid: {'No', 'Yes'}",PASS
+Numeric dtype: Tenure,int64,Expected numeric,PASS
+Numeric dtype: MonthlyCharges,int64,Expected numeric,PASS
+Numeric dtype: TotalCharges,int64,Expected numeric,PASS
+Numeric dtype: SeniorCitizen,int64,Expected numeric,PASS
+Extreme Outliers (3xIQR): Tenure,0 found,"IQR=35.0, Q1=19.0, Q3=54.0",PASS
+Extreme Outliers (3xIQR): MonthlyCharges,0 found,"IQR=91.0, Q1=67.0, Q3=158.0",PASS
+Extreme Outliers (3xIQR): TotalCharges,0 found,"IQR=4029.5, Q1=2237.2, Q3=6266.8",PASS

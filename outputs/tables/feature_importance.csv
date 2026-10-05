@@ -1,0 +1,21 @@
+Feature,Importance
+TenureGroup_New,2.9562864907074338
+Tenure,1.731716608881592
+TenureGroup_Growing,1.6847177326352365
+ContractRisk,1.1487329200500211
+EstimatedCLV,1.146760873644918
+TenureGroup_Established,1.0976094356680806
+CustomerValueSegment_Medium,1.0630977703975617
+MonthlyCharges,0.8001630663258984
+Contract_One year,0.7315908186725033
+CustomerValueSegment_High,0.6035699441680001
+Contract_Month-to-month,0.5391491252870368
+CustomerValueSegment_Low,0.46255722956104844
+PaymentMethod_Bank Transfer,0.408576415570702
+PaymentRisk,0.3163778832020264
+PaperlessBilling_No,0.29316423229152594
+PaperlessBilling_Yes,0.2901348289600394
+PaymentMethod_Credit Card,0.2564487759592201
+TotalCharges,0.24011569352847223
+AverageMonthlySpend,0.2085904170414198
+Contract_Two year,0.1894122900539795

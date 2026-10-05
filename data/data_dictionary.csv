@@ -1,0 +1,18 @@
+Column,DataType,Description,BusinessMeaning,MissingValues,Preprocessing,Role
+CustomerID,string,Unique customer identifier,Primary key for each customer record,None,Drop before modelling,ID
+Gender,string,Customer gender (Male/Female),Demographic segmentation variable,None,OneHotEncoding,Feature
+SeniorCitizen,int64,Whether the customer is a senior citizen (0/1),Age-based risk indicator,None,PassThrough (already binary),Feature
+Partner,string,Whether the customer has a partner (Yes/No),Household stability indicator,None,OneHotEncoding,Feature
+Dependents,string,Whether the customer has dependents (Yes/No),Household obligation indicator; dependents may reduce churn likelihood,None,OneHotEncoding,Feature
+Tenure,float64,Number of months the customer has been with the company,Longer tenure typically indicates higher loyalty,<5%,Median imputation + StandardScaler,Feature
+PhoneService,string,Whether the customer has a phone service (Yes/No),Service adoption measure,None,OneHotEncoding,Feature
+MultipleLines,string,Whether the customer has multiple lines,Service complexity indicator,None,OneHotEncoding,Feature
+InternetService,string,Type of internet service (DSL/Fiber optic/No),Key service driver; Fiber optic users often show higher churn,None,OneHotEncoding,Feature
+OnlineSecurity,string,Whether the customer has online security add-on,Value-added service adoption,None,OneHotEncoding,Feature
+TechSupport,string,Whether the customer has tech support add-on,Service satisfaction proxy,None,OneHotEncoding,Feature
+Contract,string,Contract term (Month-to-month/One year/Two year),Critical churn predictor; shorter contracts increase churn risk,None,OneHotEncoding,Feature
+PaperlessBilling,string,Whether the customer has paperless billing,Digital engagement indicator,None,OneHotEncoding,Feature
+PaymentMethod,string,Payment method used by the customer,Electronic check users historically show higher churn rates,None,OneHotEncoding,Feature
+MonthlyCharges,float64,Monthly charge amount in USD,Revenue contribution; higher charges may indicate dissatisfaction if value is low,<5%,Median imputation + StandardScaler,Feature
+TotalCharges,float64,Total charges over the customer lifetime,Proxy for customer lifetime value,<5%,Median imputation + StandardScaler,Feature
+Churn,int64,Whether the customer churned (1) or not (0),Binary target variable -- the label to predict,None,Target -- not transformed,Target

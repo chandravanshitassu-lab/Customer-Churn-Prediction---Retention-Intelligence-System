@@ -1,0 +1,5 @@
+Model,CV_Mean_AUC,CV_Std_AUC,CV_Min_AUC,CV_Max_AUC
+Logistic Regression,0.9943,0.0031,0.9906,1.0
+Random Forest,0.9912,0.0038,0.9875,0.9965
+Gradient Boosting,0.9789,0.0327,0.9139,1.0
+Decision Tree,0.886,0.0749,0.766,0.9931
